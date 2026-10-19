@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kritika 🌸</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #71465b;
+    background: linear-gradient(135deg, #fff1f6, #f6efff, #eff8ed);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+nav {
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fffaf5dd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #f1dce5;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #bf5e89;
+}
+
+nav a {
+    color: #91647a;
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 65px 22px;
+}
+
+.container {
+    max-width: 780px;
+    margin: auto;
+}
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #b45b82;
+}
+
+.flowers {
+    font-size: 55px;
+    margin: 25px 0;
+    animation: sway 3s infinite ease-in-out;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: 1.05;
+    color: #79445f;
+    margin: 20px 0;
+}
+
+h1 em {
+    color: #cc6c95;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #856477;
+    margin: 18px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: linear-gradient(135deg, #d96e9a, #b95782);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 10px 25px #c94f7c30;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px #c94f7c45;
+}
+
+section {
+    padding: 80px 7%;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    color: #79445f;
+    margin: 15px 0;
+}
+
+.cards {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 28px;
+    border-radius: 25px;
+    background: #ffffffc9;
+    border: 1px solid #f1d7e3;
+    box-shadow: 0 12px 35px #a65c7c12;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.icon {
+    font-size: 38px;
+}
+
+.card h3 {
+    color: #92506f;
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.note-section {
+    background: #fff9fcd9;
+    border-top: 1px solid #f1dce5;
+    border-bottom: 1px solid #f1dce5;
+}
+
+.note {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.cat-box {
+    min-height: 290px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #ffe2ee, #f0e6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #f0d2e2;
+}
+
+.cat {
+    font-size: 100px;
+    cursor: pointer;
+    animation: bounce 3s infinite ease-in-out;
+}
+
+.cat-caption {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #98677f;
+}
+
+.letter {
+    padding: 30px;
+    border-radius: 25px;
+    background: white;
+    border: 1px solid #efd9e2;
+    text-align: left;
+    box-shadow: 0 15px 40px #945b7410;
+}
+
+.letter h3 {
+    font-size: 32px;
+    color: #8d4a68;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #c15d89;
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+.lily-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.lily-card {
+    background: #ffffffc9;
+    border: 1px solid #f1dce5;
+    border-radius: 22px;
+    padding: 25px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.lily-card:hover {
+    transform: translateY(-5px);
+}
+
+.lily-card h3 {
+    color: #92506f;
+    margin: 12px 0;
+    font-size: 23px;
+}
+
+.lily-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.ending {
+    max-width: 800px;
+    margin: auto;
+    padding: 45px 30px;
+    background: #ffffffd4;
+    border: 1px solid #f1d5e2;
+    border-radius: 30px;
+    box-shadow: 0 20px 55px #945b7412;
+}
+
+.ending h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    color: #79445f;
+    margin: 18px 0;
+}
+
+.message {
+    min-height: 35px;
+    color: #b2547d;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 40px 20px;
+    color: #ad8799;
+    font-size: 13px;
+}
+
+.petal {
+    position: fixed;
+    top: -30px;
+    z-index: 20;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .cards, .note, .lily-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .letter {
+        padding: 24px;
+    }
+
+    .cat-box {
+        min-height: 230px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🌸 For Kritika</div>
+    <a href="#letter">A Little Note ♡</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container">
+
+        <div class="tag">A little website, just for you</div>
+
+        <div class="flowers">🌸 🤍 🪷</div>
+
+        <h1>
+            I miss the <em>old Kritika.</em>
+        </h1>
+
+        <p>
+            I miss our random conversations, silly laughs,
+            little updates, and the Motivation we used to share.
+            Things feel a little different now, and I know
+            it will not return in one day. No pressure
+            But I still hope we can find our way back to those
+            happy, easy conversations — naturally 💗
+        </p>
+
+        <a href="#letter" class="btn">
+            Read Your Little Note 🌷
+        </a>
+
+    </div>
+</section>
+
+<!-- FRIENDSHIP SECTION -->
+<section>
+    <div class="section-heading">
+        <div class="tag">The Little Things I Miss</div>
+        <h2>It's the simple moments that mean the most.</h2>
+        <p>
+            Not grand gestures, just the little things
+            that made our friendship feel special.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>Our Random Talks</h3>
+            <p>
+                Talking about anything and everything,
+                even when there was nothing important to say.
+                I hope those carefree chats return someday.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">😂</div>
+            <h3>Your Happy Energy</h3>
+            <p>
+                Your funny reactions, your laughter, and
+                the way a simple conversation could make
+                the day better. That's the vibe I miss.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🫶</div>
+            <h3>A Friendship Worth Keeping</h3>
+            <p>
+                I value our friendship. I want it to feel
+                comfortable and genuine again, with kindness,
+                patience, and space for both of us.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PERSONAL NOTE -->
+<section class="note-section" id="letter">
+
+    <div class="section-heading">
+        <div class="tag">A Message From The Heart</div>
+        <h2>Dear Kritika, 🌷</h2>
+        <p>Imagine a little cat delivering this note with a flower.</p>
+    </div>
+
+    <div class="note">
+
+        <div class="cat-box">
+            <div class="cat" id="cat">🐈</div>
+            <div class="cat-caption">
+                Tap the kitty for a tiny smile 🐾
+            </div>
+        </div>
+
+        <div class="letter">
+
+            <h3>Just a Little Wish…</h3>
+
+            <p>
+                These days,  I'm trying to be more thoughtful, calm, and
+                understanding. I don't expect you to suddenly
+                become the way you were before, and I don't want
+                you to feel pressured.
+            </p>
+
+            <p>
+                I just miss feeling that easy connection with you:
+                sharing silly things, talking freely, laughing
+                at random stuff, and being comfortable around
+                each other. 
+            </p>
+
+            <p>
+                You don't have to force anything. I just wanted
+                you to know that your friendship still means
+                a lot to me. 💗
+            </p>
+
+            <div class="signature">
+                More smiles, softer days, and happy chats 🌸
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- LILY GARDEN -->
+<section>
+
+    <div class="section-heading">
+        <div class="tag">A Little Lily Garden</div>
+        <h2>For the friendship I hope we keep growing.</h2>
+    </div>
+
+    <div class="lily-grid">
+
+        <div class="lily-card">
+            <div class="icon">🤍🌸</div>
+            <h3>Peace & Comfort</h3>
+            <p>
+                May our conversations feel easy again,
+                with mutual respect and no pressure.
+            </p>
+        </div>
+
+        <div class="lily-card">
+            <div class="icon">🌷💗</div>
+            <h3>Warmth & Care</h3>
+            <p>
+                May little messages, random laughs.
+            </p>
+        </div>
+
+        <div class="lily-card">
+            <div class="icon">🌿🪷</div>
+            <h3>Growing Gently</h3>
+            <p>
+                We don't need to recreate every old moment.
+                We can build a healthier friendship from here.
+            </p>
+        </div>
+
+        <div class="lily-card">
+            <div class="icon">✨🐈</div>
+            <h3>kindness</h3>
+            <p>
+                One good conversation, one silly joke,
+                
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FINAL MESSAGE -->
+<section>
+    <div class="ending">
+
+        <div class="flowers">🌸 🐈 🌷</div>
+
+        <div class="tag">One Small Wish</div>
+
+        <h2>Good friendship</h2>
+
+        <p>
+            I miss the old convo we shared, Kritika.
+            
+        </p>
+
+        <button class="btn" id="bloom">
+            Send a Little Bloom 🌷
+        </button>
+
+        <div class="message" id="message"></div>
+
+    </div>
+</section>
+
+<footer>
+    Made with care for Kritika ♡
+    <br><br>
+    🌸 No pressure. Just a friendship I value. 🌸
+</footer>
+
+<script>
+const messages = [
+    "A little flower, just for you 🌷",
+    "May our happy chats bloom again 🌸",
+    "Sending a tiny smile and good vibes 💗",
+    "One happy moment at a time 🐾"
+];
+
+let index = 0;
+
+function makeFlowers(count = 22) {
+    for (let i = 0; i < count; i++) {
+        const petal = document.createElement("span");
+
+        petal.className = "petal";
+
+        const flowers = ["🌸", "🌷", "💗", "✿", "✨"];
+
+        petal.textContent =
+            flowers[Math.floor(Math.random() * flowers.length)];
+
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.fontSize = (15 + Math.random() * 18) + "px";
+        petal.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(petal);
+
+        setTimeout(() => petal.remove(), 7500);
+    }
+}
+
+function showMessage() {
+    index = (index + 1) % messages.length;
+
+    document.getElementById("message").textContent = messages[index];
+
+    makeFlowers();
+}
+
+document.getElementById("bloom").addEventListener("click", showMessage);
+
+document.getElementById("cat").addEventListener("click", () => {
+    showMessage();
+});
+</script>
+
+</body>
+</html>
